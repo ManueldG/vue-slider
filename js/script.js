@@ -23,22 +23,11 @@ function main(){
             setPhoto:function(i){
                 this.indexImage=i;
             },
-            timeF: function(){           
-            /*this.time=setInterval(function(){
-                console.log("time",this);
-                //nextImg();
-            },3000);*/
-            console.log("time");
-            }
         },
         mounted:function(){
                 console.log("created");
-                this.timeF();
                 this.nextImg();
-                setInterval(function(){
-                    console.log("this",this.$parent.nextImg());
-                    
-                },3000);
+                setInterval(this.nextImg,3000);
             
         }
             
