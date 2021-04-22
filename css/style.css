@@ -2,10 +2,11 @@
 
 .slider{
     position: relative;
+    width:1000px;
 }
 
 .slider .slide{
-    width: 1200px;
+    width: 800px;
     margin: 0 auto;
 }
 
