@@ -1,0 +1,75 @@
+
+
+.slider{
+    position: relative;
+}
+
+.slider .slide{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.slider .slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Arrow */
+
+.prev,.next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color:#fff;
+    background-color: grey;
+    border-radius: 50%;
+    height:30px;
+    width: 30px;
+    line-height:30px;
+    vertical-align: middle;
+    text-align: center;
+    cursor: url(https://cdn.custom-cursor.com/128/assets/pointers/32/Batman_Classic_Cursor.png) , pointer;
+    transition: background-color .5s ;
+}
+
+.prev{
+    left:20px;
+}
+
+.next{
+    right:20px;
+}
+
+.prev:hover,
+.next:hover{
+    background-color: black;
+    color:yellow;
+    
+}
+
+.nav{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    background-color: #dfdd8255;
+    border-radius: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    padding: 10px;
+    width: 120px;
+}
+
+.nav i:hover{
+    color: #fff;
+}
+
+.nav i.active{
+    color: rgb(243, 12, 12);
+}
+
+
+
+
+

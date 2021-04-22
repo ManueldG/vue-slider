@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<!--fontawesome-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 <link rel="stylesheet" href="http://casaalmada.hostinggratis.it/doc/css/reset.css">
 <link rel="stylesheet" href="css/style.css">
 
-<!-- VUE-->
+<!-- VUE js -->
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+
+
 
 <script src="js/script.js"></script>
 <meta charset="UTF-8">
@@ -14,9 +20,37 @@
 <title></title>
 </head>
 <body onload="main()">
-    <div id="app">
-        {{message}}
+    <div id="app" onload="time()">
+        <section class="slider">
+            <div class="prev" @click="prevImg">
+                <div class="fas fa-arrow-left">
+
+                </div>
+            </div>
+            <div class="slide">
+                <!--http://placeimg.com/640/360/any-->
+                <!--https://www.fillmurray.com/640/360-->
+                <!--https://www.placecage.com/640/360-->
+                <img :src="images[indexImage]" alt="kitten">
+            </div>
+            <div class="next" @click="nextImg">
+                <div class="fas fa-arrow-right">
+
+                </div>
+            </div>   
+         
+            <div class="nav">
+                <i v-for="(photo,index) in images"
+                class="fa fa-circle"
+                :class="{active: index==indexImage}"
+                @click="setPhoto(index)"
+                ></i>
+            </div>      
+        </section>             
     </div>
+            
+
+    
 
 </body>
 </html>
