@@ -23,17 +23,26 @@ function main(){
             setPhoto:function(i){
                 this.indexImage=i;
             },
+            stopT:function(){
+              console.log("stop");
+              clearInterval(this.time);
+          },
+            
         },
         mounted:function(){
                 console.log("created");
                 this.nextImg();
-                setInterval(this.nextImg,3000);
+                this.time=setInterval(this.nextImg,3000);
             
         }
             
         })
         
       }
+
+      /*stop:function(){
+              clearInterval(this.time);
+          },*/
 
     
 
